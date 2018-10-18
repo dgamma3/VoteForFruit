@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>84765477-9eba-447c-bc0d-463e7be46911</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Cart\**" />
+    <Compile Remove="Views\Order\**" />
+    <Compile Remove="Views\Product\**" />
+    <Compile Remove="Views\Shared\Components\**" />
+    <Content Remove="Views\Cart\**" />
+    <Content Remove="Views\Order\**" />
+    <Content Remove="Views\Product\**" />
+    <Content Remove="Views\Shared\Components\**" />
+    <EmbeddedResource Remove="Views\Cart\**" />
+    <EmbeddedResource Remove="Views\Order\**" />
+    <EmbeddedResource Remove="Views\Product\**" />
+    <EmbeddedResource Remove="Views\Shared\Components\**" />
+    <None Remove="Views\Cart\**" />
+    <None Remove="Views\Order\**" />
+    <None Remove="Views\Product\**" />
+    <None Remove="Views\Shared\Components\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\ErrorController.cs" />
+    <Compile Remove="Infrastructure\PageLinkTagHelper.cs" />
+    <Compile Remove="Infrastructure\ProductsListViewModel.cs" />
+    <Compile Remove="Infrastructure\UrlExtensions.cs" />
+    <Compile Remove="Models\Cart.cs" />
+    <Compile Remove="Models\EFOrderRepository.cs" />
+    <Compile Remove="Models\FakeProductRepository.cs" />
+    <Compile Remove="Models\Fruit.cs" />
+    <Compile Remove="Models\IOrderRepository.cs" />
+    <Compile Remove="Models\Order.cs" />
+    <Compile Remove="Models\SessionCart.cs" />
+    <Compile Remove="Models\ViewModels\CartIndexViewModel.cs" />
+    <Compile Remove="Models\ViewModels\PagingInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Shared\_AdminLayout.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Home\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\_StandardLayout.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
+</Project>
